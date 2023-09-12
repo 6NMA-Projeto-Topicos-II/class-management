@@ -1,0 +1,70 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #FFFFFF;
+    width: 300px;
+    min-height: fit-content;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 7px;
+}
+
+.prof-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.prof-img p {
+    color: #6E6E6E;
+}
+
+img {
+    max-width: 50px;
+}
+
+.estado-num {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E7EAD;
+    min-width: fit-content;
+    max-width: max-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2px;
+}
+
+.estado-num p {
+    margin: 3px;
+}
+
+.horario {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-evenly;
+}
+
+.horario p{
+    color: #6E6E6E;
+}
+
+.titulo {
+    color: rgb(54, 54, 235);
+    font-weight: bold;
+}
+
+p{
+    margin: 0;
+    font-weight: 700;
+}
