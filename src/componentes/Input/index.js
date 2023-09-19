@@ -1,6 +1,8 @@
 export default function Input (props) {
     return (<input
-    className="input"
+        className={props.className}
+        value={props.value}
+        onChange={props.onChange}
         form={props.form}
         id={props.id}
         type={props.type} 
@@ -14,7 +16,6 @@ export default function Input (props) {
         src={props.src}
         alt={props.alt}
         accept={props.accept}
-        value={props.value}
         list={props.list}>
             {props.children}
     </input>

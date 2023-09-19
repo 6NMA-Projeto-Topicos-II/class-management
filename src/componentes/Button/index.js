@@ -10,12 +10,12 @@ export default function Button (props) {
             className={props.className}
             style={props.stye}
             disabled={props.disabled}
-            fillMode={props.fillMode}
+            fillmode={props.fillmode}
             rounded={props.rounded}
             selected={props.selected}
             toggable={props.toggable}
         >
-            {props.value}
+            {props.children}
         </button>
     )
 }

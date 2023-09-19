@@ -1,0 +1,28 @@
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+::placeholder {
+    color: #9A9A9A;
+    font-weight: 700px;
+    opacity: 1;
+}
+
+.input-cadastro {
+    width: 250px;
+    height: 45px;
+    border: 100px;
+}
+
+.botao-cadastro {
+    width: 200px;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: small;
+}
