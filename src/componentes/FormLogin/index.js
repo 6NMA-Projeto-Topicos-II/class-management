@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import "./style.css"
 
 const createLoginSchema = z.object({
     matricula: z.string()
@@ -10,7 +11,8 @@ const createLoginSchema = z.object({
     .min(8, 'Matrícula inválida'),
     senha: z.string()
     .nonempty('Senha obrigatória')
-    .min(6, 'Mínimo 6 caracteres')
+    .min(6, 'Mínimo 6 caracteres'),
+    manterlogado: z.boolean()
 })
 
 export default function FormLogin() {
@@ -42,6 +44,12 @@ export default function FormLogin() {
                 {...register('senha')}/>
                 {errors.senha && <span>{errors.senha.message}</span>}
             </div>
+            <div className="checkbox-div">
+                <Button type="checkbox" className="checkbox"{...register('manterlogado')}></Button>
+                <label>Mantenha-me conectado</label>
+            </div>
+            
+            
 
             <Button type="submit" className="botao-cadastro"> Cadastrar </Button>
         </form>
