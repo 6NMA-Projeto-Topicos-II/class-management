@@ -1,23 +1,20 @@
 import "./style.css"
 
-export default function Card (props) {
+export default function Card (inicio, fim, titulo, lab, estado, ativo = false) {
+
     return (
-        <div className="card">
-            <div className="prof-img">
-            <img src={props.img} alt={props.alt}></img>
-            <p>{props.prof}</p>
-            </div>
+        <div className={ativo ? "composto" : "simples"}>
             <div className="estado-num">
-                <p>{props.num}</p>
-                <p>{props.estado}</p>
+                <p>{lab}</p>
+                <p>{estado}</p>
             </div>
             <div className="titulo">
-                <p>{props.titulo}</p>
+                <p>{titulo}</p>
             </div>
             <div className="horario">
-                <p>{props.inicio}</p>
+                <p>{inicio}</p>
                 <p>-</p>
-                <p>{props.fim}</p>
+                <p>{fim}</p>
             </div>
         </div>
     )
