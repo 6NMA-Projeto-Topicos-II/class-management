@@ -1,0 +1,40 @@
+.header {
+    display: grid;
+    height: min-content;
+    background-color: #0672DE;
+    grid-template-areas: "side main";
+    grid-template-columns: 1fr 5fr;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-header {
+    height: 70px;
+    justify-self: center;
+    align-self: center;
+}
+
+.navbar {
+    height: 100%;
+    display: grid;
+    background-color: #0A2237;
+    grid-template-areas: "nav foto";
+    grid-template-columns: 5fr auto;
+    column-gap: 1.25rem;
+    align-items: center;
+    justify-items: last baseline;
+    border-bottom-left-radius: 40px;
+}
+.navbar .nav-lista {
+    grid-area: nav;
+    display: grid;
+    grid-template-areas: "home contato config";
+    column-gap: 1.25rem;
+}
+
+.navbar .icone{
+    height: 50px;
+    grid-area: foto;
+    margin-right: 1rem;
+}
