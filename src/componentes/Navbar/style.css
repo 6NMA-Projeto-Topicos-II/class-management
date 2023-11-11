@@ -1,6 +1,7 @@
 .header {
     display: grid;
     height: min-content;
+    width: 100%;
     background-color: #0672DE;
     grid-template-areas: "side main";
     grid-template-columns: 1fr 5fr;
