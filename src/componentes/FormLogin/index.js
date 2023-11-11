@@ -29,11 +29,12 @@ export default function FormLogin() {
     }
 
     return (
-    <form className="form-cadastro" onSubmit={handleSubmit(Login)}>
+    <form className="form-login" onSubmit={handleSubmit(Login)}>
             <div className="input-div">
                 <input
                 className="input-cadastro" 
                 placeholder="Matricula"
+                id="matricula"
                 {...register('matricula')}/>
                 {errors.matricula && <span>{errors.matricula.message}</span>}
             </div>
@@ -41,6 +42,7 @@ export default function FormLogin() {
                 <input
                 className="input-cadastro"            
                 placeholder="Senha"
+                id="senha"
                 {...register('senha')}/>
                 {errors.senha && <span>{errors.senha.message}</span>}
             </div>
@@ -51,7 +53,7 @@ export default function FormLogin() {
             
             
 
-            <Button type="submit" className="botao-cadastro"> Cadastrar </Button>
+            <Button type="submit" className="botao-cadastro"> LOGIN </Button>
         </form>
     )
 }

@@ -1,6 +1,7 @@
-import "./style.css"
+import "./style.css";
+import React from 'react';
+import FormLogin from "../../componentes/FormLogin/index.js";
 
 export default function Home() {
-    return <div className="main">
-    </div>
+    return <FormLogin></FormLogin>
 }

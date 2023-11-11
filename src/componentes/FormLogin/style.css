@@ -1,8 +1,75 @@
-.checkbox-div {
+h1 {
+	color: #1F2135;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+span {
+    color: red;
+}
+
+.form-login {
+	background-image: linear-gradient(to bottom, #8BB5E1, rgba(255,0,0,0));
+	border-radius: 60px 0px 60px 0px;
+	padding-bottom: 50px;
+    padding-top: 50px;
+	padding-right: 30px;
+	padding-left: 10px;
+	display: inline-block;
+	text-align: center;
+
+}
+
+#matricula {
+	background-image: url("https://i.imgur.com/gqe1NFu.png");
+	background-position: 10px 2px;
+	background-repeat: no-repeat;
+	font-size: 1.2rem;
+}
+
+
+#senha {
+	background-image: url("https://i.imgur.com/QripyYZ.png");
+	background-position: 10px 2px;
+	background-repeat: no-repeat;
+	font-size: 1.2rem;
+}
+
+.input-cadastro {
+	background-color: #FFFFFF;
+	border: 1px solid #8E8E8E;
+	padding: 12px;
+	text-indent: 50px;
+	border-radius: 10px;
+	margin-left: 25px;
+    margin-top: 25px;
+    display: block;
+}
+
+.checkbox {
+	border: 1px solid #8E8E8E;
+	height: 25px;
+	width: 25px;
+	font-size: 0.5rem;
+	text-align: center;
+	margin-right: 15px;
+	color: #808080;
     flex-direction: row;
     align-items: baseline;
+    margin-top: 25px;
 }
-.checkbox-div .checkbox{
-    height: 15px;
-    width: 15px;
+
+.botao-cadastro {
+	font-size: 1.5rem;
+	color: white;
+	background-color: #202237;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: none;
+	border-radius: 15px;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 5px;
 }
