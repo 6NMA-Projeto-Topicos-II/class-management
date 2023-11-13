@@ -36,7 +36,8 @@ export default function FormCadastro() {
         try {
             const response = await fetch(`http://85.31.230.148:7020/v1/Register`, {
                method:'POST',
-               body: output
+               body: output,
+               headers: {"Content-type": "application/json"}
             })
             console.log(response)
         } catch (response) {
