@@ -1,0 +1,20 @@
+.campoFiltro {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .campoFiltro h1{
+    margin-left: 130px;
+    padding-left: 20px;
+  }
+  
+  .legendaFiltro {
+    margin-left: 200px;
+  }
+  
+  #selectEstado {
+    margin-left: 10px;
+  }
+  

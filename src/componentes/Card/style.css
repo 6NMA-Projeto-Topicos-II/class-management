@@ -1,0 +1,140 @@
+.card {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 250px;
+    height: 120px;
+    min-height: fit-content;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 7px;
+    box-shadow: 2px 4px 2px rgb(206, 206, 206);
+    margin-left: 0
+
+    
+}
+
+/* Disponivel */
+.disponivel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #40d866;
+    min-width: fit-content;
+    max-width: max-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2px;
+    font-size: 17px;
+
+}
+
+.disponivel p {
+    margin: 3px;
+}
+
+/* Acesso livre */
+.acesso-livre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d86b40;
+    min-width: fit-content;
+    max-width: max-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2px;
+    font-size: 17px;
+}
+
+.acesso-livre p {
+    margin: 3px;
+}
+
+/* Manuntenção */
+.manuntencao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e94040;
+    min-width: fit-content;
+    max-width: max-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2px;
+    font-size: 17px;
+}
+
+.manuntencao p {
+    margin: 3px;
+}
+
+/* Em Aula */
+.em-aula {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E7EAD;
+    min-width: fit-content;
+    max-width: max-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2px;
+    font-size: 17px;
+    
+}
+
+.em-aula p {
+    margin: 3px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    color: #0E7EAD;
+    font-weight: bold;
+}
+
+.prof {
+    color:dimgrey;
+}
+
+.horario {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-evenly;
+}
+
+.horario p{
+    font-weight: bold;
+    color: #6E6E6E;
+}
+.index{
+    display: none;
+}

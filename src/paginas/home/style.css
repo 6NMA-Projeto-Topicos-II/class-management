@@ -1,0 +1,48 @@
+body {
+    background: #F2F2F2;
+    margin: 0;
+    /* Remova as margens padrão do corpo para garantir uma aparência mais consistente */
+    font-family: 'Arial', sans-serif;
+    /* Substitua 'Arial' pelo tipo de fonte desejado */
+}
+
+.navegacaoHome{
+    height: 400px;
+    width: 140px;
+    background-color: aquamarine;
+    position: fixed;
+}
+.container {
+    max-width: 1200px;
+    /* Adicione uma largura máxima para o conteúdo principal */
+    margin: 0 auto;
+    /* Centralize o conteúdo na página */
+    padding: 20px;
+    /* Adicione algum espaçamento interno */
+}
+
+.organization-of-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 137px;
+
+}
+
+.card {
+    width: 250px;
+    /* Ajuste a largura conforme necessário */
+    margin: 10px;
+    /* Adicione margens entre os cartões */
+    padding: 15px;
+    /* Adicione algum espaçamento interno aos cartões */
+    background: #ffffff;
+    /* Adicione uma cor de fundo aos cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adicione uma sombra sutil */
+    border-radius: 8px;
+    /* Adicione bordas arredondadas */
+}
+
+/* Adicione mais estilos conforme necessário para outros componentes */

@@ -1,0 +1,8 @@
+.checkbox-div {
+    flex-direction: row;
+    align-items: baseline;
+}
+.checkbox-div .checkbox{
+    height: 15px;
+    width: 15px;
+}
