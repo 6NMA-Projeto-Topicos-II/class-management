@@ -6,22 +6,21 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 const createCadastroSchema = z.object({
-    nome: z.string()
+    name: z.string()
     .nonempty('Nome obrigatório'),
-    sobrenome: z.string()
+    lastname: z.string()
     .nonempty('Sobrenome obrigatório'),
-    matricula: z.string()
+    registration: z.string()
     .nonempty('Matrícula obrigatória')
     .min(8, 'Matrícula inválida'),
     email: z.string()
     .nonempty('Email obrigatório')
     .email('Email inválido')
     .toLowerCase(),
-    senha: z.string()
+    password: z.string()
     .nonempty('Senha obrigatória')
     .min(6, 'Mínimo 6 caracteres')
 })
-
 
 export default function FormCadastro() {
     const [output, setOutput] = useState('')
@@ -31,10 +30,20 @@ export default function FormCadastro() {
         resolver: zodResolver(createCadastroSchema)
     })
 
-    function createCadastro(data) {
+    async function createCadastro(data) {
         setOutput(JSON.stringify(data, null, 2))
         console.log(output)
+        try {
+            const response = await fetch(`http://85.31.230.148:7020/v1/Register`, {
+               method:'POST',
+               body: output,
+               headers: {"Content-type": "application/json"}
+            })
+            console.log(response)
+        } catch (response) {
+            console.log(response)
         }
+    }
 
 
     return (
@@ -43,24 +52,24 @@ export default function FormCadastro() {
                 <input
                 className="input-cadastro" 
                 placeholder="Nome"
-                {...register('nome')}/>
-                {errors.nome && <span>{errors.nome.message}</span>}
+                {...register('name')}/>
+                {errors.name && <span>{errors.name.message}</span>}
             </div>
 
             <div className="input-div">
                 <input
                 className="input-cadastro" 
                 placeholder="Sobrenome"
-                {...register('sobrenome')}/>
-                {errors.sobrenome && <span>{errors.sobrenome.message}</span>}
+                {...register('lastname')}/>
+                {errors.lastname && <span>{errors.lastname.message}</span>}
             </div>
 
             <div className="input-div">
                 <input
                 className="input-cadastro" 
                 placeholder="Matricula"
-                {...register('matricula')}/>
-                {errors.matricula && <span>{errors.matricula.message}</span>}
+                {...register('registration')}/>
+                {errors.registration && <span>{errors.registration.message}</span>}
             </div>
             
             <div className="input-div">
@@ -75,8 +84,8 @@ export default function FormCadastro() {
                 <input
                 className="input-cadastro"            
                 placeholder="Senha"
-                {...register('senha')}/>
-                {errors.senha && <span>{errors.senha.message}</span>}
+                {...register('password')}/>
+                {errors.password && <span>{errors.password.message}</span>}
             </div>
 
             <Button type="submit" className="botao-cadastro"> Cadastrar </Button>
