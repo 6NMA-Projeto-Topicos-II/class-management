@@ -1,4 +1,4 @@
-import Button from "../Button/index"
+import Button from "../Button"
 import "./style.css"
 import { useForm } from "react-hook-form" 
 import { useState } from "react"

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./paginas/home";
 import Cadastro from "./paginas/cadastro";
-import NavBar from "./Componentes/Navbar";
+import NavBar from "./componentes/Navbar/index.js"
 import Configurações from "./paginas/configurações";
 import { Login } from "./paginas/login";
 
