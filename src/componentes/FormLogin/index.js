@@ -1,9 +1,9 @@
-import Button from "../Button/index"
 import { useForm } from "react-hook-form" 
 import { useState } from "react"
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import "./style.css"
+import Button from "../Button/index"
 
 const createLoginSchema = z.object({
     matricula: z.string()
@@ -11,8 +11,7 @@ const createLoginSchema = z.object({
     .min(8, 'Matrícula inválida'),
     senha: z.string()
     .nonempty('Senha obrigatória')
-    .min(6, 'Mínimo 6 caracteres'),
-    manterlogado: z.boolean()
+    .min(6, 'Mínimo 6 caracteres')
 })
 
 export default function FormLogin() {
@@ -23,9 +22,25 @@ export default function FormLogin() {
         resolver: zodResolver(createLoginSchema)
     })
 
-    function Login(data) {
+    async function Login(data) {
+        alert("entrou")
         setOutput(JSON.stringify(data, null, 2))
         console.log(output)
+        try {
+            const response = await fetch(`http://85.31.230.148:7020/v1/Login`, {
+               method:'POST',
+               body: output,
+               headers: {"Content-type": "application/json"}
+            })
+            console.log(response.body)
+            // sessionStorage.setItem('token', response.data.access_token) */
+        } catch (response) {
+            if(response.body) {
+                     alert(response.body)
+                 } else {
+                     alert('Aconteceu um erro inesperado ao efetuar o seu login! Entre em contato com o suporte!');
+                 }
+        }
     }
 
     return (
@@ -45,13 +60,11 @@ export default function FormLogin() {
                 {errors.senha && <span>{errors.senha.message}</span>}
             </div>
             <div className="checkbox-div">
-                <Button type="checkbox" className="checkbox"{...register('manterlogado')}></Button>
+                <Button type="checkbox" className="checkbox"></Button>
                 <label>Mantenha-me conectado</label>
             </div>
             
-            
-
-            <Button type="submit" className="botao-cadastro"> Cadastrar </Button>
+            <Button type="submit" className="botao-cadastro"> Login </Button>
         </form>
     )
 }

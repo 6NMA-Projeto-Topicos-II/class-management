@@ -41,7 +41,11 @@ export default function FormCadastro() {
             })
             console.log(response)
         } catch (response) {
-            console.log(response)
+            if(response?.data?.message) {
+                alert(response.data.message)
+            } else {
+                alert('Aconteceu um erro inesperado ao efetuar o seu login! Entre em contato com o suporte!');
+            }
         }
     }
 
