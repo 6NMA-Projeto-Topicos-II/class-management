@@ -1,0 +1,58 @@
+h1 {
+	color: #1F2135;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+label {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+span{
+	color: red;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.form-card {
+	background-image: linear-gradient(to bottom, #8BB5E1, rgba(255,0,0,0));
+	border-radius: 60px 0px 60px 0px;
+    width: 40%;
+    padding-top: 25px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    color: #8E8E8E;
+}
+
+.input-card {
+	background-color: #FFFFFF;
+	border: 1px solid #8E8E8E;
+	border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 50vh;
+	display: block;
+    text-align: center;
+}
+
+.option {
+    width: 40%;
+}
+
+.botao-salvar {
+	font-size: 1.5rem;
+	color: white;
+	background-color: #202237;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border: none;
+	border-radius: 15px;
+    display: inherit;
+    margin-top: 25px;
+	margin-bottom: 5px;
+}
