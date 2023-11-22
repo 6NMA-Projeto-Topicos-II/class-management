@@ -31,7 +31,6 @@ export default function FormLogin() {
   const navigate = useNavigate();
 
   async function Login(data) {
-    alert("entrou");
     setOutput(JSON.stringify(data, null, 2));
     console.log(output);
     try {
