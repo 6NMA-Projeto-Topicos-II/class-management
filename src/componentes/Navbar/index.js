@@ -1,7 +1,7 @@
 import ItemNavegação from "./ItemNavegação/index"
-import Usericon from "../../Assets/do-utilizador.png"
 import Logo from "../Logo/index"
 import "./style.css"
+import LogoutButton from "./LogoutButton/index.js"
 
 export default function NavBar() {
     return (
@@ -9,11 +9,10 @@ export default function NavBar() {
             <Logo className="logo-header"/>
             <nav className="navbar">
                 <ul className="nav-lista">
-                    <ItemNavegação href="/" nome="HOME"/>
-                    <ItemNavegação href="/contato" nome="CONTATO"/>
-                    <ItemNavegação href="/configurações" nome="CONFIGURAÇÕES"/>
+                    <ItemNavegação href="/logado/home" nome="HOME"/>
+                    <ItemNavegação href="/logado/laboratorios" nome="LABORATORIOS"/>
+                    <LogoutButton/>
                 </ul>
-            <img className="icone" src={Usericon} alt=""/>
             </nav>
         </header>
     )

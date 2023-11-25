@@ -43,12 +43,12 @@ export default function FormLogin() {
           console.log(resposta.status);
           console.log(resposta);
           sessionStorage.setItem('token', true)
-          navigate('/home')
+          navigate('/logado/home')
         })
         .catch((erro) => {
           console.log("erro");
           console.log(erro);
-          alert(erro?.response?.data);
+          console.log(erro?.response?.data);
         });
     } catch (err) {
       console.log(`Erro: ${err.message}`);
@@ -72,10 +72,6 @@ export default function FormLogin() {
           {...register("password")}
         />
         {errors.senha && <span>{errors.senha.message}</span>}
-      </div>
-      <div className="checkbox-div">
-        <Button type="checkbox" className="checkbox"></Button>
-        <label>Mantenha-me conectado</label>
       </div>
 
       <Button type="submit" className="botao-cadastro">

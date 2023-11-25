@@ -1,5 +1,9 @@
 import FormCard from "../../Componentes/FormCard";
 
 export default function Lab() {
-    return <FormCard></FormCard>
+  return (
+    <div >
+      <FormCard></FormCard>
+    </div>
+  );
 }
