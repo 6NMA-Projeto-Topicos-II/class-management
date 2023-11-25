@@ -103,7 +103,7 @@ export default function FormCadastro() {
 
             </div>
 
-            <Button type="submit" className="botao-cadastro"> CADASTRAR </Button>
+            <Button type="submit" className="botao-cadastro"> Enviar </Button>
         </form>
         
     )

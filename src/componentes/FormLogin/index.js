@@ -41,14 +41,12 @@ export default function FormLogin() {
         })
         .then((resposta) => {
           console.log(resposta.status);
-          console.log(resposta);
+          console.log(resposta.data);
           sessionStorage.setItem('token', true)
           navigate('/logado/home')
         })
         .catch((erro) => {
-          console.log("erro");
-          console.log(erro);
-          console.log(erro?.response?.data);
+          console.log("erro");;
         });
     } catch (err) {
       console.log(`Erro: ${err.message}`);

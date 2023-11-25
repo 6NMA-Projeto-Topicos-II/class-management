@@ -1,9 +1,9 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import NavBar from "../../Componentes/Navbar/index.js";
+import PaginaNaoLogado from "../naoLogado/index.js";
 
 export default function AreaLogada() {
   const logado = sessionStorage.getItem("token");
-  const navigate = useNavigate();
 
   if (logado === "true") {
     return (
@@ -13,6 +13,6 @@ export default function AreaLogada() {
       </div>
     );
   } else {
-    return navigate("/");
-  }
+    return <PaginaNaoLogado/>
+}
 }

@@ -1,0 +1,7 @@
+.nao-logado-div {
+    gap:3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem;
+}

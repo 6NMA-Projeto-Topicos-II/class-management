@@ -1,0 +1,13 @@
+.voltar-botao {
+    justify-self: ;
+    font-size: small;
+    color: white;
+    background-color: #202237;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+}

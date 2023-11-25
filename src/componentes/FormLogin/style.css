@@ -9,6 +9,7 @@ span {
 }
 
 .form-login {
+	width: fit-content;
 	background-image: linear-gradient(to bottom, #8BB5E1, rgba(255,0,0,0));
 	border-radius: 60px 0px 60px 0px;
 	padding-bottom: 50px;
