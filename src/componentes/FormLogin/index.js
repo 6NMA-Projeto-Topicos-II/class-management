@@ -55,8 +55,9 @@ export default function FormLogin() {
     }
   }
 
+
   return (
-    <form className="form-cadastro" onSubmit={handleSubmit(Login)}>
+    <form className="form-login" onSubmit={handleSubmit(Login)}>
       <div className="input-div">
         <input
           className="input-cadastro"
