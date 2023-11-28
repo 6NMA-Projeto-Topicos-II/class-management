@@ -1,28 +1,87 @@
-.form-cadastro {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+h1 {
+	color: #1F2135;
+	font-size: 2.5em;
+	text-align: center;
 }
 
-::placeholder {
-    color: #9A9A9A;
-    font-weight: 700px;
-    opacity: 1;
+span{
+	color:red;
+}
+
+.form-cadastro {
+	background-image: linear-gradient(to bottom, rgba(137,180,224,0.7), rgba(255,0,0,0));
+	border-radius: 60px 0px 60px 0px;
+	padding-bottom: 25px;
+	padding-top:50px;
+	padding-right: 25px;
+	padding-left: 15px;
+	display: inline-block;
+	text-align: center;
+    color: #8E8E8E;
+
 }
 
 .input-cadastro {
-    width: 250px;
-    height: 45px;
-    border: 100px;
+	background-color: #FFFFFF;
+	border: 1px solid #8E8E8E;
+	padding: 12px;
+	text-indent: 50px;
+	border-radius: 10px;
+	margin-top: 25px;
+	display: block;
+}
+
+.input-group {
+    display: flex;
+}
+
+#nome {
+	font-size: 1.2rem;
+    margin-right: 15px;
+    text-indent: 20px;
+
+}
+
+#sobrenome {
+	font-size: 1.2rem;
+    text-indent: 20px;
+}
+
+#matricula {
+	background-image: url("https://i.imgur.com/gqe1NFu.png");
+	background-position: 10px 2px;
+	background-repeat: no-repeat;
+	font-size: 1.2rem;
+    width: 95%;
+}
+
+#email {
+    background-image: url("https://i.imgur.com/3t8TEIv.png");
+	background-position: 14px 10px;
+	background-repeat: no-repeat;
+	font-size: 1.2rem;
+    width: 95%;
+}
+
+#senha {
+	background-image: url("https://i.imgur.com/QripyYZ.png");
+	background-position: 10px 2px;
+	background-repeat: no-repeat;
+	font-size: 1.2rem;
+    width: 95%;
 }
 
 .botao-cadastro {
-    width: 200px;
-}
-
-.input-div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: small;
+	font-size: 1.5rem;
+	color: white;
+	background-color: #202237;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border: none;
+	border-radius: 15px;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 5px;
 }

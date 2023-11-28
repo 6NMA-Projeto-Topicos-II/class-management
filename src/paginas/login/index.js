@@ -1,5 +1,11 @@
+import FormLogin from "../../Componentes/FormLogin"
 import "./style.css"
 
-export function Login() {
-    return
+export default function Login() {
+    return (
+        <div>
+            <h1>login</h1>
+            <FormLogin></FormLogin>
+        </div>
+    )
 }

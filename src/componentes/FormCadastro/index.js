@@ -1,4 +1,4 @@
-import Button from "../Button/index"
+import Button from "../Button"
 import "./style.css"
 import { useForm } from "react-hook-form" 
 import { useState } from "react"
@@ -41,7 +41,11 @@ export default function FormCadastro() {
             })
             console.log(response)
         } catch (response) {
-            console.log(response)
+            if(response?.data?.message) {
+                alert(response.data.message)
+            } else {
+                alert('Aconteceu um erro inesperado ao efetuar o seu login! Entre em contato com o suporte!');
+            }
         }
     }
 
@@ -49,33 +53,41 @@ export default function FormCadastro() {
     return (
         <form className="form-cadastro" onSubmit={handleSubmit(createCadastro)}>
             <div className="input-div">
-                <input
-                className="input-cadastro" 
-                placeholder="Nome"
-                {...register('name')}/>
-                {errors.name && <span>{errors.name.message}</span>}
-            </div>
+                <div className="input-group">
+                    <input
+                    className="input-cadastro" 
+                    placeholder="Nome"
+                    id="nome"
+                    {...register('name')}/>
+                    {errors.name && <span>{errors.name.message}</span>}
 
-            <div className="input-div">
-                <input
-                className="input-cadastro" 
-                placeholder="Sobrenome"
-                {...register('lastname')}/>
-                {errors.lastname && <span>{errors.lastname.message}</span>}
-            </div>
+                <div className="input-div">
+                    <input
+                    className="input-cadastro" 
+                    placeholder="Sobrenome"
+                    id="sobrenome"
+                    {...register('lastname')}/>
+                    {errors.lastname && <span>{errors.lastname.message}</span>}
+                </div>
+                </div>
+                </div>
 
             <div className="input-div">
                 <input
                 className="input-cadastro" 
                 placeholder="Matricula"
+
+                id="matricula"
                 {...register('registration')}/>
                 {errors.registration && <span>{errors.registration.message}</span>}
+
             </div>
             
             <div className="input-div">
                 <input 
                 className="input-cadastro"
                 type="email"
+                id="email"
                 placeholder="Email"
                 {...register('email')}/>
                 {errors.email && <span>{errors.email.message}</span>}
@@ -84,11 +96,14 @@ export default function FormCadastro() {
                 <input
                 className="input-cadastro"            
                 placeholder="Senha"
+
+                id="senha"
                 {...register('password')}/>
                 {errors.password && <span>{errors.password.message}</span>}
+
             </div>
 
-            <Button type="submit" className="botao-cadastro"> Cadastrar </Button>
+            <Button type="submit" className="botao-cadastro"> CADASTRAR </Button>
         </form>
         
     )
