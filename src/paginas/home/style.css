@@ -3,5 +3,21 @@ body {
 }
 
 .main {
+    display: flex;
     width: 100%;
+    justify-content: center;
+}
+
+.listacards {
+    gap: 60px;
+    display: grid;
+    padding: 5% 0 5% 0;
+    height: fit-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.itemlista {
+    width: fit-content;
+    justify-self: center;
+    padding-bottom: 5rem;
 }
